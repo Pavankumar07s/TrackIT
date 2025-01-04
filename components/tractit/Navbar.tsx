@@ -21,8 +21,9 @@ import {
   Settings,
 } from 'lucide-react-native';
 import  RootStackParamList  from '../../app/(tabs)/index';
+import { StackHeaderProps } from '@react-navigation/stack';
 
-const Navbar = () => {
+const Navbar = (props: StackHeaderProps) => {
   const navigation = useNavigation<NavigationProp<typeof RootStackParamList>>();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const slideAnim = useRef(new Animated.Value(-Dimensions.get('window').width * 0.75)).current;
@@ -50,7 +51,7 @@ const Navbar = () => {
   const menuItems = [
     { icon: UserCircle, label: 'Profile', screen: 'profile' },
     { icon: Package, label: 'Products', screen: 'Product' },
-    { icon: Factory, label: 'Manufacturers', screen: 'Manufacture' },
+    { icon: Factory, label: 'Manufacturers', screen: "Manufacture" },
     { icon: Settings, label: 'Settings', screen: 'settings' },
   ];
 

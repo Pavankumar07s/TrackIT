@@ -5,6 +5,7 @@ import ProductScreen from '../Screens/ProductDetails';
 import ProductItemsScreen from '../Screens/ProductItems';
 import ProductItemTimelineScreen from '../Screens/ProductItemTimeline';
 import ModalScreen from '../Screens/Modal';
+import Navbar from '../../components/tractit/Navbar';
 type RootStackParamList = {
   Product: undefined;
   ProductDetails: { productId: string };
@@ -23,7 +24,9 @@ const Stack = createStackNavigator<RootStackParamList>();
 const App = () => {
   return (
     
-    <Stack.Navigator initialRouteName="Product">
+    <Stack.Navigator initialRouteName="Product" screenOptions={{
+      header: (props) => <Navbar {...props} />,
+    }}>
       {/* Product list screen */}
       <Stack.Screen
         name="Product"

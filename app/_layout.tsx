@@ -23,7 +23,7 @@ export const unstable_settings = {
 SplashScreen.preventAutoHideAsync();
 
 const apolloClient = new ApolloClient({
-  uri: process.env.REACT_APP_GRAPHQL_URI || 'http://192.168.238.92:3000/graphql',
+  uri: process.env.REACT_APP_GRAPHQL_URI || 'http://192.168.217.92:3000/graphql',
   cache: new InMemoryCache(),
 });
 
