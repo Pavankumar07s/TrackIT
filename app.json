@@ -36,6 +36,12 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "13d8d8d6-47bd-4c9e-a469-a0723b6c4826"
+      }
+    },
+    "owner": "pavankumar_07s"
   }
 }
