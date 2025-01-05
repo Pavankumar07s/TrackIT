@@ -1,5 +1,3 @@
-
-
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
@@ -11,6 +9,8 @@ import Navbar from '@/components/tractit/Navbar';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { SafeAreaFrameContext, SafeAreaView } from 'react-native-safe-area-context';
+// import { useAccount } from "../types/utils/ethers";
+import WalletConnectProvider from '@walletconnect/react-native';
 
 export {
   ErrorBoundary, // Catch any errors thrown by the Layout component.
@@ -28,6 +28,7 @@ const apolloClient = new ApolloClient({
 });
 
 export default function RootLayout() {
+  
   const [loaded, error] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
     ...FontAwesome.font,
@@ -57,7 +58,7 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
-
+  // const { account, balance, isOwner } = useAccount();
   return (
     <SafeAreaView style={{ flex: 1 }} edges={['left', 'right', 'bottom']}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
@@ -73,6 +74,5 @@ function RootLayoutNav() {
       </ApolloProvider>
     </ThemeProvider>
     </SafeAreaView>
-    
   );
 }

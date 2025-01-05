@@ -460,7 +460,7 @@ const styles = StyleSheet.create({
     gap: 12,
     ...Platform.select({
       ios: {
-        shadowColor: '#000',
+        shadowColor: 'grey',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.25,
         shadowRadius: 8,
@@ -477,7 +477,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   actionButton: {
-    backgroundColor: '#111',
+    backgroundColor: 'grey',
     borderRadius: 12,
     padding: 16,
     ...Platform.select({
@@ -501,7 +501,7 @@ const styles = StyleSheet.create({
   actionButtonText: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#2563EB',
+    color: 'white',
     flex: 1,
   },
   errorContainer: {

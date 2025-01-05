@@ -215,17 +215,18 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   useEffect(() => {
     const fetchEstimate = async () => {
       if (!id) return;
-      
+      console.log('Fetching estimate for product:', id);
       setLoading(true);
       try {
-        const response = await fetch('https://giant-berries-worry.loca.lt/predict', {
+        const response = await fetch('https://25d4-2409-40c2-1013-5d66-c92c-f860-3e41-39c1.ngrok-free.app/predict', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ company_name:manufacturer.name,product_id: id, number_of_products:totalCount }),
+          body: JSON.stringify({ company_name:manufacturer.name.slice(0,1).toLocaleUpperCase(),product_id: "P"+id, number_of_products:totalCount }),
         });
         const data = await response.json();
+        console.log(data);
         setEstimateData(data);
       } catch (error) {
         console.error('Error fetching estimate:', error);

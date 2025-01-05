@@ -105,7 +105,7 @@ const ManufactureCard = ({ item, index }: {
   const translateY = useRef(new Animated.Value(50)).current;
 
   useEffect(() => {
-    const delay = index * 150; // Stagger effect
+    const delay = index * 150; 
     Animated.parallel([
       Animated.timing(fadeAnim, {
         toValue: 1,
@@ -139,7 +139,7 @@ const ManufactureCard = ({ item, index }: {
 
 const ManufactureScreen: React.FC = () => {
   const { data, loading, fetchMore } = useQuery(ManufacturersDocument);
-
+  console.log(data?.manufacturers);
   const loadMore = async () => {
     await fetchMore({
       variables: {
