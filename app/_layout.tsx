@@ -60,7 +60,7 @@ function RootLayoutNav() {
   const colorScheme = useColorScheme();
   // const { account, balance, isOwner } = useAccount();
   return (
-    <SafeAreaView style={{ flex: 1 }} edges={['left', 'right', 'bottom']}>
+    <SafeAreaView style={{ flex: 1, }} edges={['left', 'right', 'bottom']}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Navbar />
       <ApolloProvider client={apolloClient}>

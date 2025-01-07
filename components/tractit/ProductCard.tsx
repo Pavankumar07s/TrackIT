@@ -211,14 +211,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const [loading, setLoading] = useState(false);
 
   const { id, name = 'Unnamed Product', manufacturer, totalCount = 0 } = product || {};
-
+  console.log(id)
   useEffect(() => {
     const fetchEstimate = async () => {
       if (!id) return;
       console.log('Fetching estimate for product:', id);
       setLoading(true);
       try {
-        const response = await fetch('https://25d4-2409-40c2-1013-5d66-c92c-f860-3e41-39c1.ngrok-free.app/predict', {
+        const response = await fetch('https://2af3-2409-40c2-100d-638f-d73-fd9-118f-2c1e.ngrok-free.app/predict', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

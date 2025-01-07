@@ -281,7 +281,6 @@ const TimelineItem = React.memo(({
 }) => {
   const IconComponent = statusIconMap[item.status];
   const iconColor = isActive ? '#2563EB' : '#666';
-  
   return (
     <View style={[styles.productItem, isActive && styles.activeItem]}>
       <View style={styles.timelineContainer}>
@@ -291,7 +290,9 @@ const TimelineItem = React.memo(({
       </View>
 
       <View style={styles.contentContainer}>
+        
         <Text style={[styles.date, isActive && styles.activeDate]}>
+          
           {format(new Date(item.timestamp), 'PPp')}
         </Text>
         <Text style={[styles.status, isActive && styles.activeStatus]}>

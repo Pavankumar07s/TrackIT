@@ -84,6 +84,7 @@ export default function Product() {
 
   return (
     <View style={styles.container}>
+      
       <FlatList
         data={data?.products || []}
         renderItem={renderProduct}
