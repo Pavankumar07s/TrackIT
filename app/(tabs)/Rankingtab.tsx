@@ -505,7 +505,7 @@ const ManufacturerItem = ({ item, index, product }) => {
       if (!id) return;
       setLoading(true);
       try {
-        const response = await fetch('https://2af3-2409-40c2-100d-638f-d73-fd9-118f-2c1e.ngrok-free.app/predict', {
+        const response = await fetch('https://e5cc-2409-40c2-1007-7c56-6f9d-78ba-5618-d0d6.ngrok-free.app/predict', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -218,7 +218,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       console.log('Fetching estimate for product:', id);
       setLoading(true);
       try {
-        const response = await fetch('https://2af3-2409-40c2-100d-638f-d73-fd9-118f-2c1e.ngrok-free.app/predict', {
+        const response = await fetch('https://e5cc-2409-40c2-1007-7c56-6f9d-78ba-5618-d0d6.ngrok-free.app/predict', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -319,7 +319,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 <ActivityIndicator size="small" color="#6B7280" />
               ) : estimateData ? (
                 <View style={styles.estimateContent}>
-                  <Text style={styles.estimateLabel}>Estimated Date</Text>
+                  <Text style={styles.estimateLabel}>Estimated Days</Text>
                   <Text style={styles.estimateValue}>
                     {estimateData.predicted_recycle_time?.toLocaleString() || '0'} Days
                   </Text>
